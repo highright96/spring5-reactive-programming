@@ -15,7 +15,7 @@ class TemperatureController {
 
     private val clients = CopyOnWriteArraySet<SseEmitter>()
 
-    @GetMapping("/temperature-stream")
+    //@GetMapping("/temperature-stream")
     fun event(request: HttpServletRequest): SseEmitter {
         val emitter = SseEmitter()
         clients.add(emitter)
